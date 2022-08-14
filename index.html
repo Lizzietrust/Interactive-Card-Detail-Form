@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Interactive Card Detail Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+            <img src="./interactive-card-details-form-main/images/bg-main-desktop.png" alt="">
+        <div class="main">
+            <form action="" id="form">
+                <div class="card-name card">
+                    <label for="">cardholder name</label>
+                    <input type="text" class="det" id="card-name" placeholder="e.g. Jane Appleseed">
+                    <p>Error Message</p>
+                </div>
+                <div class="card-no card">
+                    <label for="">card number</label>
+                    <input type="text" class="det" id="card-number" maxlength="19" placeholder="e.g. 1234 5678 9123 0000">
+                    <p>Error Message</p>
+                </div>
+                <div class="form-flex">
+                    <div class="date card">
+                        <label for="">exp. date (mm/yy)</label>
+                        <input type="text" name="" id="" class="month" maxlength="2" placeholder="MM">
+                        <input type="text" name="" id="" class="year" maxlength="2" placeholder="YY">
+                        <p>Error Message</p>
+                    </div>
+                    <div class="cvc card">
+                        <label for="">cvc</label>
+                        <input type="text" maxlength="3" name="" class="cvc-no" id="cvc" placeholder="e.g. 123">
+                        <p>Error Message</p>
+                    </div>
+                </div>
+                <button class="btn">Confirm</button>
+            </form>
+        </div>
+        <div class="thank hidden">
+            <img src="./interactive-card-details-form-main/images/icon-complete.svg" alt="">
+            <h1>THANK YOU!</h1>
+            <p>We've added your card details</p>
+            <button class="btn">Continue</button>
+        </div>
+    </div>
+    <div class="card-front">
+        <div class="circle">
+            <div class="circle-white"></div>
+            <div class="circle-trans"></div>
+        </div>
+        <div class="number-input">
+           <p id="no-input">0000  0000  0000  0000</p> 
+        </div>
+        <div class="name-date-input">
+            <div class="name-input">
+                <p id="name-input">JANE  APPLESEED</p> 
+            </div>
+            <date-input>
+               <p><span id="mon">00</span>/<span id="yr">00</span></p> 
+            </date-input>
+         </div>
+    </div>
+    <div class="card-back">
+        <p id="cvc-input">000</p>
+    </div> 
+  <script src="index.js"></script>  
+</body>
+</html>

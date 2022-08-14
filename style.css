@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Grotesk';
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+img{
+    max-height: 100vh;
+    width: 450px;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.main form {
+    padding-left: 80px;
+}
+
+label {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.form-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+ form .det {
+    outline: none;
+    border: 1px solid hsl(270, 3%, 87%);
+    width: 360px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.month {
+    outline: none;
+    border: 1px solid hsl(270, 3%, 87%);
+    width: 80px;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+
+.year {
+    outline: none;
+    border: 1px solid hsl(270, 3%, 87%);
+    width: 80px;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+
+.cvc-no {
+    outline: none;
+    border: 1px solid hsl(270, 3%, 87%);
+    width: 180px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+input:focus {
+    border-color: hsl(278, 94%, 30%);
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+.card-name,.card-no,.form-flex {
+    margin-bottom: 10px;
+}
+
+input::placeholder {
+   color: hsl(270, 3%, 87%); 
+}
+
+.btn {
+    width: 365px;
+    padding: 15px 0;
+    border: none;
+    background-color: hsl(278, 68%, 11%);
+    border-radius: 5px;
+    color: hsl(270, 3%, 87%);
+    margin-top: 15px;
+    font-size: 18px;
+    font-family: 'Space Grotesk';
+    cursor: pointer;
+}
+
+.card-front {
+    background-image:url(./interactive-card-details-form-main/images/bg-card-front.png);
+    position: absolute;
+    top: 90px;
+    left: 130px;
+    border-radius: 10px;
+    width: 445px;
+    height: 230px;
+    padding: 30px;
+}
+
+.card-back {
+    background-image:url(./interactive-card-details-form-main/images/bg-card-back.png);
+    position: absolute;
+    top: 350px;
+    left: 210px;
+    border-radius: 10px;
+    width: 445px;
+    height: 230px;
+}
+
+.circle {
+    display: flex;
+}
+
+.circle-white {
+    background-color: hsl(0, 0%, 100%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.circle-trans {
+    border: 1px solid hsl(270, 3%, 87%);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin: 13px 0 0 10px;
+}
+
+.number-input {
+    margin: 55px 0 25px 0;
+}
+
+.number-input #no-input {
+    color: hsl(0, 0%, 100%);
+    font-size: 22px;
+    word-spacing: 10px;
+    letter-spacing: 5.5px;
+}
+
+.name-date-input {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name-date-input #name-input {
+    word-spacing: 4px;
+}
+
+.name-date-input p {
+    color: hsl(270, 3%, 87%);
+    font-size: 13px;
+}
+
+.card-back p {
+    position: absolute;
+    top: 110px;
+    right: 60px;
+    color: hsl(0, 0%, 100%);
+}
+
+.card p {
+    visibility: hidden;
+    color: hsl(0, 100%, 66%);
+}
+
+.card.success input {
+    border-color: hsl(278, 94%, 30%);;
+}
+
+.card.error input {
+    border-color: hsl(0, 100%, 66%);
+}
+
+
+.card.error p {
+    visibility: visible;
+    color: hsl(0, 100%, 66%);
+    margin: 10px 0 20px;
+    text-align: left;
+    font-size: 14px;
+}
+
+/*
+
+
+
+*/
+
+input.invalid {
+    border: 1px solid hsl(0, 100%, 66%);
+}
+
+.error-hint {
+    color: hsl(0, 100%, 66%);
+}
+ 
+.hidden {
+    display: none;
+}
+
+.thank img {
+    height: 150px;
+    width: 150px;
+    margin: 0 0 50px 90px;
+}
+
+.thank {
+    position: absolute;
+    left: 770px;
+    top: 100px;
+}
+
+.thank h1, p {
+    text-align: center;
+}
+
+.thank .btn {
+    margin-top: 50px;
+}
+
+.thank h1 {
+    margin-bottom: 20px;
+}
+
+
+@media (max-width: 765px) {
+    .container {
+        display: block;
+        height: 80vh;
+        align-items: center;
+    }
+
+    .container img {
+        height: 300px;
+        width: 100%;
+    }
+
+    .card-back {
+        top: 10px;
+        left: 40px;
+        width: 445px;
+    }
+
+    .card-front {
+        z-index: 1;
+        top: 150px;
+        left: 5px;
+    }
+
+    .main {
+        padding: 100px 0 50px;
+        margin-left: -120px; 
+    }
+
+    .thank {
+        top: 400px;
+        left: 60px;
+        padding-bottom: 50px;
+    }
+
+    .thank img {
+        height: 70px;
+        width: 70px;
+        margin-left: 150px;
+        margin-bottom: 30px;
+    }
+}
